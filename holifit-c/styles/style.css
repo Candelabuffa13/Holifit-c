@@ -1,0 +1,244 @@
+*{
+    margin: 5px ;
+    padding: 0 ;
+    box-sizing: border-box ;
+}
+
+a{
+    color: rgb(131, 123, 123);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+body{
+    font-family: "Instrument Serif", serif !important;
+    background-color:rgba(214, 186, 186, 0.575); 
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10,1fr);
+}
+
+main{
+    color: black;
+}
+
+header{
+    height: 11vh !important;
+    display: flex !important;
+    justify-content: space-between !important ;
+    align-items: center !important;
+    margin: 5px !important;
+    position: sticky !important;
+    top: 0 !important;
+    background-color: white !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(236, 139, 155);
+  font-size: 28px;
+  font-family: "Instrument Serif", serif !important;
+  font-weight: normal;
+  pointer-events: none;
+}
+
+ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    /* justify-content: space-around;*/
+}
+
+.logo{
+    height: 112px;
+    width: auto;
+}
+
+.titulo{
+    height: 8vh;
+}
+
+li{
+    list-style: none;
+}
+
+h2{
+    color: rgb(236, 139, 155)
+}
+
+.inline-block{
+    display: inline;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(236, 139, 155);
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: "Instrument Serif", serif;
+    font-weight: bold;
+}
+
+.block{
+    display: block;
+
+}
+
+.flex{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: end !important;
+    height: 50px !important;
+    padding: 10px !important;
+}
+
+footer {
+    all: unset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    color:rgb(236, 139, 155) ;
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-family: "Instrument Serif", serif !important;
+}
+
+footer h2 {
+    font-family: "Instrument Serif", serif;
+    color:rgb(236, 139, 155) ;
+    font-size: 18px;
+    margin: 0;
+}
+
+.nav-links {
+    color: rgb(131, 123, 123);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Instrument Serif", serif;
+}
+
+.nav-links:hover {
+    color: rgb(236, 139, 155) !important;
+}
+
+.rrss{
+    height: 6vh;
+    color: black;
+    width: auto;
+}
+
+/* Contacto */
+.cont-main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+form, .form{
+    width: 30vw;
+    display: flex;
+    flex-flow: column wrap;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+}
+
+input:focus, textarea:focus{
+  background-color: lightgrey !important;
+  color: black !important;
+}
+
+input type text{
+    height: 8vh;
+}
+
+.contenedor-rutinas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    border: 1px solid grey;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px grey;
+    padding: 15px;
+    margin: 10px;
+} 
+.card__imagen{
+    box-shadow: 10px 10px 5px white;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card__texto{
+    grid-column: span 2;
+    padding: 10px;
+    font-family: "Instrument Serif", serif;
+    font-size: medium;
+    justify-content: center;
+    border: none;
+    font-weight: bold;
+}
+
+.card__boton{
+    grid-column: span 3;
+    padding: 10px;
+    text-align: center;
+    font-family: "Instrument Serif", serif;
+    font-size: large;
+    border: none;
+    background-color: rgb(236, 139, 155);
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px grey;
+}
+.card__boton:hover{
+    background-color: lightgrey;
+    color: black;
+}
+
+.card__boton--agotado{
+    background-color: grey;
+    color: white;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.card__boton--agotado:hover{
+    text-decoration: line-through;
+}
+
+.nav-flex {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-flex li {
+  list-style: none;
+}
+
+
