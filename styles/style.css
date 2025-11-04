@@ -1,126 +1,40 @@
-*{
-    margin: 5px ;
-    padding: 0 ;
-    box-sizing: border-box ;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a{
+body {
+    font-family: "Instrument Serif", serif !important;
+    background-color: rgba(214, 186, 186, 0.575);
+    min-height: 100vh;
+    color: black;
+}
+
+.text-pink {
+    color: rgb(236, 139, 155);
+}
+
+a {
     color: rgb(131, 123, 123);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
-body{
-    font-family: "Instrument Serif", serif !important;
-    background-color:rgba(214, 186, 186, 0.575); 
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(10,1fr);
+
+a:hover {
+    color: rgb(236, 139, 155) !important;
 }
 
-main{
-    color: black;
-}
-
-header{
-    height: 11vh !important;
-    display: flex !important;
-    justify-content: space-between !important ;
-    align-items: center !important;
-    margin: 5px !important;
-    position: sticky !important;
-    top: 0 !important;
-    background-color: white !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-}
-
-header h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgb(236, 139, 155);
-    font-size: 28px;
-    font-family: "Instrument Serif", serif !important;
-    font-weight: normal;
-    pointer-events: none;
-}
-
-ul{
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    /* justify-content: space-around;*/
-}
-
-.logo{
-    height: 112px;
-    width: auto;
-}
-
-.titulo{
-    height: 8vh;
-}
-
-li{
-    list-style: none;
-}
-
-h2{
-    color: rgb(236, 139, 155)
-}
-
-.inline-block{
-    display: inline;
-    border: 2px solid black;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(236, 139, 155);
-    border-radius: 10px;
-    text-decoration: none;
-    font-family: "Instrument Serif", serif;
-    font-weight: bold;
-}
-
-.block{
-    display: block;
-
-}
-
-.flex{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: end !important;
-    height: 50px !important;
-    padding: 10px !important;
-}
-
-footer {
-    all: unset;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 10vh;
-    color:rgb(236, 139, 155) ;
-    padding: 10px 0;
-    box-sizing: border-box;
-    font-family: "Instrument Serif", serif !important;
-}
-
-footer h2 {
-    font-family: "Instrument Serif", serif;
-    color:rgb(236, 139, 155) ;
-    font-size: 18px;
-    margin: 0;
+.logo {
+    height: 70px;
+    width: auto ;
 }
 
 .nav-links {
     color: rgb(131, 123, 123);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
+    font-weight: bold ;
     font-family: "Instrument Serif", serif;
 }
 
@@ -128,36 +42,46 @@ footer h2 {
     color: rgb(236, 139, 155) !important;
 }
 
-.rrss{
-    height: 6vh;
-    color: black;
+main {
+    padding: 40px 20px;
+}
+
+h1 {
+    color: rgb(236, 139, 155);
+    font-size: 32px;
+}
+
+footer {
+    background-color: white;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+footer h2 {
+    font-size: 18px;
+    color: rgb(236, 139, 155);
+    margin: 0;
+}
+
+footer ul {
+    display: flex ;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+footer .rrss {
+    height: 40px;
     width: auto;
 }
 
-/* Contacto */
-.cont-main{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-form, .form{
-    width: 30vw;
-    display: flex;
-    flex-flow: column wrap;
-    flex-direction: column;
-    gap: 15px;
-    margin: auto;
-}
-
-input:focus, textarea:focus{
-    background-color: lightgrey !important;
-    color: black !important;
-}
-
-input type text{
-    height: 8vh;
+footer .rrss:hover {
+    opacity: 0.7;
 }
 
 .contenedor-rutinas {
@@ -168,226 +92,90 @@ input type text{
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: column ;
     align-items: center;
     width: 250px;
-    border: 1px solid grey;
-    grid-template-columns: repeat(3, 100px);
-    gap: 10px;
-    background-color: white;
+    border: 1px solid grey ;
+    background-color: white ;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 2px 5px grey;
     padding: 15px;
     margin: 10px;
-} 
-.card__imagen{
-    box-shadow: 10px 10px 5px white;
+}
+
+.card__imagen {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
 }
 
-.card__texto{
-    grid-column: span 2;
+.card__texto {
     padding: 10px;
-    font-family: "Instrument Serif", serif;
-    font-size: medium;
-    justify-content: center;
-    border: none;
-    font-weight: bold;
+    font-size: medium ;
+    font-weight: bold ;
 }
 
-.card__boton{
-    grid-column: span 3;
-    padding: 10px;
-    text-align: center;
-    font-family: "Instrument Serif", serif;
-    font-size: large;
+.card__boton {
+    padding: 10px ;
+    font-size: large ; 
     border: none;
     background-color: rgb(236, 139, 155);
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 2px 2px 5px grey;
 }
-.card__boton:hover{
+
+.card__boton:hover {
     background-color: lightgrey;
     color: black;
 }
 
-.card__boton--agotado{
-    background-color: grey;
-    color: white;
-    cursor: not-allowed;
-    box-shadow: none;
+@media (max-width: 768px) {
+    .logo {
+    height: 50px;
 }
 
-.card__boton--agotado:hover{
-    text-decoration: line-through;
+h1 {
+    font-size: 26px;
 }
 
-.nav-flex {
-    display: flex;
-    gap: 18px;
-    align-items: center;
-    list-style: none;
+footer h2 {
+    font-size: 16px;
 }
 
-.nav-flex li {
-    list-style: none;
+footer .rrss {
+    height: 28px;
 }
 
-/*.grid-quiensoy {
-    display: grid;
-    grid-template-areas:
-    "top top"
-    "bloque1 bloque1"
-    "bloque2 bloque2"
-    "bottom bottom";
-    gap: 3rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
+.card {
+    width: 90%;
+    max-width: 320px;
+}
 }
 
-
-.top {
-    grid-area: top;
-    text-align: center;
+@media (max-width: 480px) {
+h1 {
+    font-size: 22px;
 }
 
-.bloque1 {
-    grid-area: bloque1;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    align-items: center;
-    gap: 1.5rem;
+a {
+    font-size: 16px;
 }
-
-.bloque2 {
-    grid-area: bloque2;
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    align-items: center;
-    gap: 1.5rem;
 }
-
-.bottom {
-    grid-area: bottom;
-    text-align: center;
-    margin-top: 1rem;
-}
-
 
 .img-izquierda { 
-    grid-area: img1; 
-    width: 250px;
-    height: auto;
+    width: 250px; 
+    height: auto; 
     border-radius: 10px;
-    margin: 10px;
-}
-
-.img-derecha { 
-    grid-area: img2; 
-    width: 250px;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;  
-}
-
-
-.grid-quiensoy p {
-    line-height: 1.7;
-    font-size: 1.05rem;
-    color: #333;
-}
-
-
-@media (max-width: 900px) {
-    .bloque1,
-    .bloque2 {
-    grid-template-columns: 1fr;
-    text-align: center;
-    }
-
-    .img-izquierda,
-    .img-derecha {
-    margin: 0 auto;
-    }
+    margin: 10px; 
 } 
-*/
-/* Contenedor principal */
-.quiensoy-container {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem;
+.img-derecha { 
+    width: 250px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin: 10px; 
 }
-
-/* --- Secciones --- */
-.top {
-  text-align: center;
-}
-
-.bloque {
-  display: grid;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Imagen izquierda + texto derecha */
-.bloque1 {
-  grid-template-columns: 250px 1fr;
-}
-
-/* Texto izquierda + imagen derecha */
-.bloque2 {
-  grid-template-columns: 1fr 250px;
-}
-
-/* Último párrafo centrado */
-.bottom {
-  text-align: center;
-}
-
-/* --- Imágenes con tu tamaño --- */
-.img-izquierda {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.img-derecha {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-/* --- Texto general --- */
-.quiensoy-container p {
-  line-height: 1.7;
-  font-size: 1.05rem;
-  color: #333;
-}
-
-/* --- Responsive para móviles --- */
-@media (max-width: 900px) {
-  .bloque1,
-  .bloque2 {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .bloque img {
-    margin: 0 auto;
-  }
-}
-

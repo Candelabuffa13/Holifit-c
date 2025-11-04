@@ -1,85 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLIFIT.C - Contacto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../styles/style.css">
-
-    <t-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-<title>HOLIFIT.C - Contacto</title>
 </head>
+
 <body>
-    <body>
-        <header>
-        <a href="../index.html">
-            <img src="../assets/HOLIFIT (1).png" alt="logo de la pagina" class="logo">
+    <header class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+        <img src="../assets/HOLIFIT (1).png" alt="logo" class="logo me-2">
+        <span class="fw-bold text-pink">HOLIFIT.C</span>
         </a>
 
-        <h1>HOLIFIT.C</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <nav>
-            <ul class="flex">
-                <li>
-                    <a href="../index.html" class="nav-links">Inicio</a>
-                </li>
-                <li>
-                    <a href="./rutinas.html" class="nav-links">Rutinas</a>
-                </li>
-                <li>
-                    <a href="./quiensoy.html" class="nav-links">Quién soy</a>
-                </li>
-                <li>
-                    <a href="./testimonios.html" class="nav-links">Testimonios</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-links">Contacto</a>
-                </li>
-            </ul>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a href="../index.html" class="nav-link nav-links">Inicio</a></li>
+            <li class="nav-item"><a href="./rutinas.html" class="nav-link nav-links">Rutinas</a></li>
+            <li class="nav-item"><a href="./quiensoy.html" class="nav-link nav-links">Quién soy</a></li>
+            <li class="nav-item"><a href="./testimonios.html" class="nav-link nav-links">Testimonios</a></li>
+            <li class="nav-item"><a href="#" class="nav-link nav-links active">Contacto</a></li>
+        </ul>
         </nav>
+    </div>
     </header>
 
-    <main>
-        <form>
+    <main class="container my-5">
+    <section class="text-center mb-4">
+        <h1 class="text-pink mb-3">Contacto</h1>
+        <p>¡Dejanos tu mensaje! Te responderé lo antes posible 💗</p>
+    </section>
 
-            <label for="name" class="Contac">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+    <form class="mx-auto p-4 rounded shadow-sm bg-white cont-main" style="max-width: 500px;">
+        <div class="mb-3 text-start">
+        <label for="name" class="form-label fw-bold">Nombre:</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+        </div>
 
-            <label for="email" class="Contac">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+        <div class="mb-3 text-start">
+        <label for="email" class="form-label fw-bold">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+        </div>
 
-            <label for="message" class="Contac">Deja tu consulta:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <div class="mb-3 text-start">
+        <label for="message" class="form-label fw-bold">Deja tu consulta:</label>
+        <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+        </div>
 
-            <button type="submit" class="Contac">Enviar</button>
-        </form>
+        <button type="submit" class="btn w-100" style="background-color: rgb(236, 139, 155); color: white; font-weight: bold;">
+        Enviar
+        </button>
+    </form>
     </main>
 
 
     <footer>
-        <h2>Derechos reservados de autor</h2>
-        <h2>Creado por Candela Buffa 💗</h2>
-
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/holifit.c/" target="_blank">
-                    <img src="../assets/1731430269_logo-instagram-png.png" alt="logo instagram" class="rrss"> 
-                </a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com/@cande.buffa" target="_blank">
-                    <img src="../assets/tik-tok-logo-transparent-031f.png" alt="logo tiktok" class="rrss">
-                </a>
-            </li>
-            <li>
-                <a href="https://web.whatsapp.com/"target="_blank">
-                    <img src="../assets/1716574832whatsapp-icon-png.png" alt="logo whatsapp" class="rrss">
-                </a>
-            </li>
-        </ul>
+    <h2>Derechos reservados de autor</h2>
+    <h2>Creado por Candela Buffa 💗</h2>
+    <ul>
+        <li>
+        <a href="https://www.instagram.com/holifit.c/" target="_blank">
+            <img src="../assets/1731430269_logo-instagram-png.png" alt="Instagram" class="rrss">
+        </a>
+        </li>
+        <li>
+        <a href="https://www.tiktok.com/@cande.buffa" target="_blank">
+            <img src="../assets/tik-tok-logo-transparent-031f.png" alt="Tiktok" class="rrss">
+        </a>
+        </li>
+        <li>
+        <a href="https://web.whatsapp.com/" target="_blank">
+            <img src="../assets/1716574832whatsapp-icon-png.png" alt="WhatsApp" class="rrss">
+        </a>
+        </li>
+    </ul>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>

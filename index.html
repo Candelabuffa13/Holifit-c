@@ -19,33 +19,40 @@
 </head>
 
 <body>
-    <header>
-        <a href="./index.html">
-            <img src="./assets/HOLIFIT (1).png" alt="logo de la pagina" class="logo">
-        </a>
+    <header class="navbar navbar-expand-lg bg-light p-3">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="./index.html">
+            <img src="./assets/HOLIFIT (1).png" alt="logo de la pagina" class="logo me-2" style="height: 50px;">
+            <span class="fw-bold">HOLIFIT.C</span>
+            </a>
 
-        <h1>HOLIFIT.C</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <nav>
-            <ul class="flex">
-                <li>
-                    <a href="#" class="nav-links"> Inicio</a>
+        <nav class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"> 
+                    <a href="#" class="nav-link">Inicio</a>
                 </li>
-                <li>
-                    <a href="./Pages/rutinas.html" class="nav-links">Rutinas</a>
+                <li class="nav-item">
+                    <a href="./Pages/rutinas.html" class="nav-link">Rutinas</a>
                 </li>
-                <li>
-                    <a href="./Pages/quiensoy.html" class="nav-links">Quién soy</a>
+                <li class="nav-item">
+                    <a href="./Pages/quiensoy.html" class="nav-link">Quién soy</a>
                 </li>
-                <li>
-                    <a href="./Pages/testimonios.html" class="nav-links">Testimonios</a>
+                <li class="nav-item">
+                    <a href="./Pages/testimonios.html" class="nav-link">Testimonios</a>
                 </li>
-                <li>
-                    <a href="./Pages/contacto.html" class="nav-links">Contacto</a>
+                <li class="nav-item">
+                    <a href="./Pages/contacto.html" class="nav-link">Contacto</a> 
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
+
 
     <main>
         <section>
@@ -58,27 +65,19 @@
     </main>
 
 
-    <footer>
-        <h2 soy-clase> Derechos reservados de autor</h2>
-        <h2 soy-clase>Creado por Candela Buffa 💗</h2>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/holifit.c/" target="_blank">
-                    <img src="./assets/1731430269_logo-instagram-png.png" alt="logo instagram" class="rrss"> 
-                </a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com/@cande.buffa" target="_blank">
-                    <img src="./assets/tik-tok-logo-transparent-031f.png" alt="logo tiktok" class="rrss">
-                </a>
-            </li>
-            <li>
-                <a href="https://web.whatsapp.com/"target="_blank">
-                    <img src="./assets/1716574832whatsapp-icon-png.png" alt="logo whatsapp" class="rrss">
-                </a>
-            </li>
-        </ul>
-    </footer>
+    <footer class="text-center py-4 bg-light">
+        <h2 class="mb-1">Derechos reservados de autor</h2>
+        <h2 class="mb-3">Creado por Candela Buffa 💗</h2>
+            <ul class="list-unstyled d-flex justify-content-center gap-3">
+                <li>
+                    <a href="https://www.instagram.com/holifit.c/" target="_blank"><img src="./assets/1731430269_logo-instagram-png.png" alt="logo instagram" class="rrss img-fluid" style="height:40px;"></a></li>
+                <li>
+                    <a href="https://www.tiktok.com/@cande.buffa" target="_blank"><img src="./assets/tik-tok-logo-transparent-031f.png" alt="logo tiktok" class="rrss img-fluid" style="height:40px;"></a></li>
+                <li>
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src="./assets/1716574832whatsapp-icon-png.png" alt="logo whatsapp" class="rrss img-fluid" style="height:40px;"></a></li>
+            </ul>
+</footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
