@@ -43,7 +43,9 @@ a:hover {
 }
 
 main {
-    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1100px; 
+    padding: 0 15px;   
 }
 
 h1 {
@@ -87,7 +89,7 @@ footer .rrss:hover {
 .contenedor-rutinas {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -178,4 +180,169 @@ a {
     height: auto; 
     border-radius: 10px; 
     margin: 10px; 
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Instrument Serif", serif !important;
+    background-color: rgba(214, 186, 186, 0.1);
+    overflow-x: hidden;
+}
+
+main, section {
+    margin: 0 auto;
+    padding: 40px 15px;
+    max-width: 1100px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(236, 139, 155);
+}
+
+.btn {
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}
+
+.text-pink {
+    color: rgb(236, 139, 155);
+}
+
+section.problemas {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section.problemas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+section.problemas li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+section.recibis {
+    width: 100%;
+    background-color: #f9c9d4;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section.recibis .p-4 {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+section.faq {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 80px 20px;
+}
+
+.accordion-button {
+    font-weight: bold;
+    color: rgb(236, 139, 155);
+}
+
+section + section {
+    margin-top: 0;
+}
+
+/* === HERO con fondo completo === */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/hero-fondo.jpg") center/cover no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Capa de color rosa encima de la imagen */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(236, 139, 155, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contenido */
+.hero-content {
+    position: relative;
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero-content a.btn {
+    background-color: white;
+    color: rgb(236, 139, 155);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-content a.btn:hover {
+    background-color: rgba(255,255,255,0.9);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.hero {
+    background-attachment: scroll;
+    height: 85vh;
+}
+.hero-content h1 {
+    font-size: 1.9rem;
+} 
+.hero-content p {
+    font-size: 1.1rem; 
+}
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
