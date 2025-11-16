@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$fuente: 'Roboto', sans-serif;
+$fuente-titulos: 'Instrument Serif', serif;
+$background-color: rgb(236, 139, 155) ;
+$fuente-color: white;
+$boton-color: rgb(255, 87, 87);
+$boton-hover-color: rgb(255, 57, 57);
+$ancho50: 50vw;
+
+*{
+    font-family: $fuente ;
+    color: $fuente-color;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
