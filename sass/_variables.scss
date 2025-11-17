@@ -1,19 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
-$fuente: 'Roboto', sans-serif;
-$fuente-titulos: 'Instrument Serif', serif;
-$background-color: rgb(236, 139, 155) ;
-$fuente-color: white;
-$boton-color: rgb(255, 87, 87);
-$boton-hover-color: rgb(255, 57, 57);
-$ancho50: 50vw;
+$rosa: rgb(236, 139, 155);
+$gris-texto: rgb(131, 123, 123);
+$gris-oscuro: #333;
+$fondo-body: rgba(214, 186, 186, 0.1);
+$fuente-principal: "Instrument Serif", serif;
 
-*{
-    font-family: $fuente ;
-    color: $fuente-color;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+$sombra-card: 0 2px 5px grey;
+$sombra-hover: 0 4px 8px rgba(0,0,0,0.2);
+
+$transicion: 0.3s ease;
+
+
+
+@mixin flex($display, $direction, $justify, $align, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
 }
 
+@mixin boton($bg, $color, $radius, $padding) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    border-radius: $radius;
+    padding: $padding;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: .9;
+        transform: scale(1.05);
+    }
+}
+
+@mixin card($radius, $shadow, $padding) {
+    background-color: white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: $padding;
+    transition: 0.3s;
+}
+
+
+%texto-rosa {
+    color: $rosa !important;
+    font-weight: bold;
+}
+
+%centrado {
+    text-align: center;
+}
 

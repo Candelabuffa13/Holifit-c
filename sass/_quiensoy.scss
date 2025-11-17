@@ -1,0 +1,65 @@
+@use "variables" as v;
+
+.quiensoy {
+  background-color: #fff;
+  padding-top: 10px;
+  margin: auto;
+  max-width: 1200px;
+  font-size: 1.15rem;
+  color: v.$gris-oscuro;
+
+  .presentacion {
+    width: 92%;
+    margin: 0 auto 40px;
+    padding: 0 25px;
+    text-align: justify;
+  }
+
+  h2 {
+    color: v.$rosa;
+    font-weight: bold;
+    margin: 40px 0 10px 5%;
+  }
+}
+
+.bloque {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 25px;
+  width: 90%;
+  margin: 30px auto;
+
+  img {
+    width: 90%;
+    max-width: 380px;
+    border-radius: 15px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.7;
+  }
+}
+
+.bloque1 {
+  margin-left: -40px;
+  transform: translateX(-20px);
+}
+
+.bloque2 {
+  margin-right: -80px;
+  transform: translateX(20px);
+}
+
+@media (max-width: 992px) {
+  .bloque {
+    grid-template-columns: 1fr;
+
+    p {
+      text-align: center;
+    }
+  }
+}

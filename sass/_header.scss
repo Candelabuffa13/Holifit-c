@@ -1,16 +1,44 @@
 @use "variables" as v;
 
-header {
-    font-family: 'Instrument Serif', serif;
-    background-color: v.$header-bg-color;
-    color: v.$header-text-color;
-    padding: v.$header-padding;
-    text-align: center;
-
-h1 {
-    font-size: v.$header-font-size;
-    margin-bottom: v.$header-margin-bottom;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: v.$fuente-principal;
+    background-color: v.$fondo-body;
+    color: black;
+}
 
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.navbar {
+    background-color: v.$fondo-body !important;
+}
+
+.nav-links,
+.nav-link {
+    color: v.$gris-texto !important;
+    font-weight: bold;
+    font-family: v.$fuente-principal;
+    transition: color v.$transicion;
+}
+
+.nav-links:hover,
+.nav-link:hover,
+.navbar-nav .active {
+    color: v.$rosa !important;
+}
+
+.navbar-brand span {
+    @extend %texto-rosa;
 }

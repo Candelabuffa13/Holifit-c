@@ -1,0 +1,9 @@
+@use "variables" as v;
+
+.testimonios {
+    h5,
+    .nombre,
+    h5.text-pink {
+    @extend %texto-rosa;
+}
+}

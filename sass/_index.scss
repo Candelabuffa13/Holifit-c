@@ -1,0 +1,97 @@
+@use "variables" as v;
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)),
+    url("../assets/hero-fondo.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 2rem;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-btn {
+    @include v.boton(#fff, v.$rosa, 10px, 12px 30px);
+}
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      transform: scale(1.05);
+    }
+  }
+
+
+/* PROBLEMAS */
+.problemas {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    color: v.$rosa;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 600px;
+
+    li {
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  .ver-planes-btn {
+    background-color: v.$rosa;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: v.$transicion;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+/* RECIBIS */
+.recibis {
+  background-color: v.$rosa;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  .p-4 {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+}

@@ -1,0 +1,38 @@
+@use "variables" as v;
+
+footer {
+  background-color: v.$fondo-body;
+  padding: 25px 0;
+  text-align: center;
+  color: #000;
+
+  h2 {
+    font-size: 1rem;
+    color: v.$rosa;
+    margin: 0.3rem 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .rrss {
+    width: 30px;
+    height: 30px;
+    transition: transform v.$transicion;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  .rrss[alt*="Tiktok"] {
+    width: 30px !important;
+    height: auto !important;
+  }
+}
