@@ -107,12 +107,14 @@ footer .rrss[alt*=Tiktok] {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)), url("../assets/hero-fondo.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)), url("../assets/hero-fondo.jpg") center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  padding: 0;
+  margin: 0;
 }
 
 .hero-content {
@@ -141,8 +143,8 @@ footer .rrss[alt*=Tiktok] {
   opacity: 0.9;
   transform: scale(1.05);
 }
-.hero-content:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+.hero-content :hover {
+  background-color: transparent !important;
   transform: scale(1.05);
 }
 
@@ -173,7 +175,7 @@ footer .rrss[alt*=Tiktok] {
   font-weight: bold;
   transition: 0.3s ease;
 }
-.problemas .ver-planes-btn:hover {
+.problemas .ver-planes-btn :hover {
   opacity: 0.9;
 }
 
