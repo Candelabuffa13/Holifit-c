@@ -23,7 +23,7 @@
     margin: 10px;
     transition: all 0.3s ease;
 
-    &:hover {
+    :hover {
         transform: translateY(-5px);
         box-shadow: v.$sombra-hover;
     }
@@ -53,7 +53,7 @@
     box-shadow: 2px 2px 5px grey;
     transition: 0.3s;
 
-    &:hover {
+    :hover {
         background-color: lightgrey;
         color: black;
     }

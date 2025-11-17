@@ -1,9 +1,30 @@
 @use "variables" as v;
 
-.testimonios {
-    h5,
-    .nombre,
-    h5.text-pink {
-    @extend %texto-rosa;
+
+
+@keyframes slide-up-fade {
+0% {
+    opacity: 0;
+    transform: translateY(25px);
 }
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.testimonios-card {
+    animation: slide-up-fade 0.8s ease-out both;
+}
+
+.testimonios-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.testimonios-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.testimonios-card:nth-child(3) {
+    animation-delay: 0.3s;
 }

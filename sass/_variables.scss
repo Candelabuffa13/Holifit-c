@@ -47,6 +47,15 @@ $transicion: 0.3s ease;
     transition: 0.3s;
 }
 
+@mixin animation($name, $duration: 0.8s, $timing: ease-out, $delay: 0s, $fill: both) {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-delay: $delay;
+    animation-fill-mode: $fill;
+}
+
+
 
 %texto-rosa {
     color: $rosa !important;

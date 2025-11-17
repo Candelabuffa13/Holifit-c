@@ -2,11 +2,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
-.navbar-brand span, .testimonios h5,
-.testimonios .nombre,
-.testimonios h5.text-pink {
+.navbar-brand span {
   color: rgb(236, 139, 155) !important;
   font-weight: bold;
+}
+
+@keyframes slide-up-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.testimonios-card {
+  animation: slide-up-fade 0.8s ease-out both;
+}
+
+.testimonios-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.testimonios-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.testimonios-card:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
 * {
@@ -80,7 +104,6 @@ footer .rrss[alt*=Tiktok] {
   height: auto !important;
 }
 
-/* HERO */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -123,7 +146,6 @@ footer .rrss[alt*=Tiktok] {
   transform: scale(1.05);
 }
 
-/* PROBLEMAS */
 .problemas {
   background-color: #fff;
   padding: 80px 20px;
@@ -155,7 +177,6 @@ footer .rrss[alt*=Tiktok] {
   opacity: 0.9;
 }
 
-/* RECIBIS */
 .recibis {
   background-color: rgb(236, 139, 155);
   color: white;
@@ -199,7 +220,7 @@ footer .rrss[alt*=Tiktok] {
   margin: 10px;
   transition: all 0.3s ease;
 }
-.card:hover {
+.card :hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -228,7 +249,7 @@ footer .rrss[alt*=Tiktok] {
   box-shadow: 2px 2px 5px grey;
   transition: 0.3s;
 }
-.card__boton:hover {
+.card__boton :hover {
   background-color: lightgrey;
   color: black;
 }
