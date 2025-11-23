@@ -1,18 +1,27 @@
 @use "variables" as v;
 
+/* ======================================
+   CONTENEDOR GENERAL
+====================================== */
 .quiensoy {
   background-color: #fff;
-  padding-top: 10px;
+  padding-top: 20px;
   margin: auto;
   max-width: 1200px;
   font-size: 1.15rem;
   color: v.$gris-oscuro;
+  line-height: 1.7;
+
+  /* Texto siempre justificado */
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 
   .presentacion {
     width: 92%;
-    margin: 0 auto 40px;
+    margin: 0 auto 40px auto;
     padding: 0 25px;
-    text-align: justify;
   }
 
   h2 {
@@ -22,44 +31,126 @@
   }
 }
 
+/* ======================================
+   BLOQUES DE IMAGEN + TEXTO
+====================================== */
 .bloque {
   display: grid;
   grid-template-columns: 45% 1fr;
-  gap: 25px;
+  align-items: center;
+  gap: 40px;
   width: 90%;
-  margin: 30px auto;
+  margin: 60px auto;
 
-  img {
-    width: 90%;
-    max-width: 380px;
+  .imagen img {
+    width: 100%;
+    max-width: 420px;
     border-radius: 15px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
   }
 
-  p {
-    text-align: justify;
-    line-height: 1.7;
+  .texto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 }
 
-.bloque1 {
-  margin-left: -40px;
-  transform: translateX(-20px);
+/* Imagen izquierda */
+.bloque-izquierda {
+  .imagen {
+    margin-left: -30px; // Ajuste visual leve
+  }
 }
 
-.bloque2 {
-  margin-right: -80px;
-  transform: translateX(20px);
+/* Imagen derecha */
+.bloque-derecha {
+  grid-template-columns: 1fr 45%;
+
+  .imagen {
+    margin-right: -30px;
+  }
 }
 
+/* ======================================
+   TEXTO FINAL — CENTRADO EN TODAS LAS PANTALLAS
+====================================== */
+.texto-final {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto 40px auto;
+  text-align: center;
+
+  p {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    text-justify: none;
+    line-height: 1.8;
+    font-size: 1.15rem;
+  }
+
+  a {
+    color: v.$rosa !important;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
 @media (max-width: 992px) {
   .bloque {
     grid-template-columns: 1fr;
+    gap: 25px;
 
-    p {
-      text-align: center;
+    .imagen {
+      margin: 0 !important;
+    }
+
+    .texto {
+      text-align: justify;
     }
   }
+
+  .texto-final {
+    width: 92%;
+    margin: 40px auto;
+
+    p {
+      max-width: 100%;
+    }
+  }
+
+  footer {
+  text-align: center;
+  padding: 25px 0;
+  background-color: #fff;
+
+  h2 {
+    margin: 0 !important;           // 🔥 elimina TODO margen
+    padding: 0 !important;
+    line-height: 1.1 !important;    // 🔥 bien pegadito
+    color: rgb(236, 139, 155);
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;                 // 🔥 fuerza alineación
+  }
+
+  h2 + h2 {
+    margin-top: -3px !important;    // 🔥 los pega aún más
+  }
+
+  ul {
+    margin-top: 10px !important;    // deja espacio SOLO con los iconos
+  }
+}
+
 }

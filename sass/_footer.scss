@@ -36,3 +36,23 @@ footer {
     height: auto !important;
   }
 }
+
+/* ===========================
+   FIX FOOTER SOLO EN DESKTOP
+=========================== */
+@media (min-width: 992px) {
+  footer h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;   // 🔥 más aire
+    display: block !important;
+  }
+
+  footer h2 + h2 {
+    margin-top: 4px !important;    // ⭐ antes era -6, ahora queda más natural
+  }
+
+  footer ul {
+    margin-top: 12px !important;
+  }
+}

@@ -3,21 +3,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
+/* ============================
+   VARIABLES DE COLOR
+============================ */
+
 $rosa: rgb(236, 139, 155);
 $gris-texto: rgb(131, 123, 123);
 $gris-oscuro: #333;
 $fondo-body: rgba(214, 186, 186, 0.1);
+
+/* ============================
+   TIPOGRAFÍA
+============================ */
+
 $fuente-principal: "Instrument Serif", serif;
+
+/* ============================
+   SOMBRAS
+============================ */
 
 $sombra-card: 0 2px 5px grey;
 $sombra-hover: 0 4px 8px rgba(0,0,0,0.2);
 
+/* ============================
+   TRANSICIÓN
+============================ */
+
 $transicion: 0.3s ease;
 
-
+/* ============================
+   MIXINS
+============================ */
 
 @mixin flex($display, $direction, $justify, $align, $wrap) {
-    display: flex;
+    display: $display;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -55,7 +74,9 @@ $transicion: 0.3s ease;
     animation-fill-mode: $fill;
 }
 
-
+/* ============================
+   PLACEHOLDERS
+============================ */
 
 %texto-rosa {
     color: $rosa !important;
@@ -65,4 +86,3 @@ $transicion: 0.3s ease;
 %centrado {
     text-align: center;
 }
-

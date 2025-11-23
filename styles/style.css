@@ -1,7 +1,26 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+/* ============================
+   VARIABLES DE COLOR
+============================ */
+/* ============================
+   TIPOGRAFÍA
+============================ */
+/* ============================
+   SOMBRAS
+============================ */
+/* ============================
+   TRANSICIÓN
+============================ */
+/* ============================
+   MIXINS
+============================ */
+/* ============================
+   PLACEHOLDERS
+============================ */
 .navbar-brand span {
   color: rgb(236, 139, 155) !important;
   font-weight: bold;
@@ -104,33 +123,50 @@ footer .rrss[alt*=Tiktok] {
   height: auto !important;
 }
 
+/* ===========================
+   FIX FOOTER SOLO EN DESKTOP
+=========================== */
+@media (min-width: 992px) {
+  footer h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    display: block !important;
+  }
+  footer h2 + h2 {
+    margin-top: 4px !important;
+  }
+  footer ul {
+    margin-top: 12px !important;
+  }
+}
+/* ================================
+   HERO
+================================ */
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)), url("../assets/hero-fondo.jpg") center center/cover no-repeat;
+  background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)), url("../assets/hero-fondo.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  padding: 0;
-  margin: 0;
 }
-
-.hero-content {
+.hero .hero-content {
   max-width: 700px;
   padding: 2rem;
 }
-.hero-content h1 {
+.hero .hero-content h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
   margin-bottom: 1rem;
 }
-.hero-content p {
+.hero .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-.hero-content .hero-btn {
+.hero .hero-content .hero-btn {
   background-color: #fff;
   color: rgb(236, 139, 155);
   border: none;
@@ -139,15 +175,18 @@ footer .rrss[alt*=Tiktok] {
   font-weight: bold;
   transition: 0.3s;
 }
-.hero-content .hero-btn:hover {
+.hero .hero-content .hero-btn:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
-.hero-content :hover {
+.hero .hero-content .hero-btn:hover {
   background-color: transparent !important;
-  transform: scale(1.05);
+  color: #fff !important;
 }
 
+/* ================================
+   PROBLEMAS
+================================ */
 .problemas {
   background-color: #fff;
   padding: 80px 20px;
@@ -155,10 +194,12 @@ footer .rrss[alt*=Tiktok] {
 }
 .problemas h2 {
   color: rgb(236, 139, 155);
+  font-weight: bold;
   margin-bottom: 30px;
 }
 .problemas ul {
   list-style: none;
+  padding: 0;
   margin: 0 auto;
   max-width: 600px;
 }
@@ -168,41 +209,98 @@ footer .rrss[alt*=Tiktok] {
 }
 .problemas .ver-planes-btn {
   background-color: rgb(236, 139, 155);
+  color: #fff;
   border: none;
+  border-radius: 10px;
   padding: 12px 30px;
-  border-radius: 8px;
-  color: white;
   font-weight: bold;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
-.problemas .ver-planes-btn :hover {
+.problemas .ver-planes-btn:hover {
   opacity: 0.9;
+  transform: scale(1.05);
 }
 
+/* ================================
+   RECIBIS — CARDS BIEN ALINEADAS
+================================ */
 .recibis {
   background-color: rgb(236, 139, 155);
   color: white;
-  padding: 80px 20px;
+  padding: 70px 20px 80px;
   text-align: center;
 }
 .recibis h2 {
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
-.recibis .p-4 {
-  background-color: #fff;
-  color: black;
+.recibis {
+  /* CONTENEDOR DE LAS 3 CARDS */
+}
+.recibis .cards-recibis {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.recibis {
+  /* CARD INDIVIDUAL */
+}
+.recibis .card-recibis {
+  background-color: white;
   border-radius: 15px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: 0.3s;
+  width: 320px;
+  min-height: 180px;
+  background: #fff !important;
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.recibis .card-recibis:hover {
+  transform: translateY(-6px);
+}
+.recibis .card-recibis h4 {
+  color: rgb(236, 139, 155);
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+}
+.recibis .card-recibis p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .recibis .cards-recibis {
+    gap: 25px;
+  }
+  .recibis .card-recibis {
+    width: 90%;
+    max-width: 360px;
+    min-height: auto;
+    padding: 22px 18px;
+  }
+}
 .contenedor-rutinas {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  padding: 60px 15px;
+  padding: 5px 15px;
   margin: 0 auto;
   max-width: 1100px;
 }
@@ -256,19 +354,27 @@ footer .rrss[alt*=Tiktok] {
   color: black;
 }
 
+/* ======================================
+   CONTENEDOR GENERAL
+====================================== */
 .quiensoy {
   background-color: #fff;
-  padding-top: 10px;
+  padding-top: 20px;
   margin: auto;
   max-width: 1200px;
   font-size: 1.15rem;
   color: #333;
+  line-height: 1.7;
+  /* Texto siempre justificado */
+}
+.quiensoy p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 .quiensoy .presentacion {
   width: 92%;
-  margin: 0 auto 40px;
+  margin: 0 auto 40px auto;
   padding: 0 25px;
-  text-align: justify;
 }
 .quiensoy h2 {
   color: rgb(236, 139, 155);
@@ -276,42 +382,110 @@ footer .rrss[alt*=Tiktok] {
   margin: 40px 0 10px 5%;
 }
 
+/* ======================================
+   BLOQUES DE IMAGEN + TEXTO
+====================================== */
 .bloque {
   display: grid;
   grid-template-columns: 45% 1fr;
-  gap: 25px;
+  align-items: center;
+  gap: 40px;
   width: 90%;
-  margin: 30px auto;
+  margin: 60px auto;
 }
-.bloque img {
-  width: 90%;
-  max-width: 380px;
+.bloque .imagen img {
+  width: 100%;
+  max-width: 420px;
   border-radius: 15px;
   object-fit: cover;
   display: block;
   margin: 0 auto;
 }
-.bloque p {
-  text-align: justify;
-  line-height: 1.7;
+.bloque .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.bloque1 {
-  margin-left: -40px;
-  transform: translateX(-20px);
+/* Imagen izquierda */
+.bloque-izquierda .imagen {
+  margin-left: -30px;
 }
 
-.bloque2 {
-  margin-right: -80px;
-  transform: translateX(20px);
+/* Imagen derecha */
+.bloque-derecha {
+  grid-template-columns: 1fr 45%;
+}
+.bloque-derecha .imagen {
+  margin-right: -30px;
 }
 
+/* ======================================
+   TEXTO FINAL — CENTRADO EN TODAS LAS PANTALLAS
+====================================== */
+.texto-final {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto 40px auto;
+  text-align: center;
+}
+.texto-final p {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  text-justify: none;
+  line-height: 1.8;
+  font-size: 1.15rem;
+}
+.texto-final a {
+  color: rgb(236, 139, 155) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+.texto-final a:hover {
+  opacity: 0.8;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
 @media (max-width: 992px) {
   .bloque {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
-  .bloque p {
+  .bloque .imagen {
+    margin: 0 !important;
+  }
+  .bloque .texto {
+    text-align: justify;
+  }
+  .texto-final {
+    width: 92%;
+    margin: 40px auto;
+  }
+  .texto-final p {
+    max-width: 100%;
+  }
+  footer {
     text-align: center;
+    padding: 25px 0;
+    background-color: #fff;
+  }
+  footer h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+    color: rgb(236, 139, 155);
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+  }
+  footer h2 + h2 {
+    margin-top: -3px !important;
+  }
+  footer ul {
+    margin-top: 10px !important;
   }
 }
 
