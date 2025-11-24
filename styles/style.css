@@ -148,10 +148,10 @@ footer .rrss[alt*=Tiktok] {
   min-height: 100vh;
   background: linear-gradient(rgba(236, 139, 155, 0.55), rgba(236, 139, 155, 0.55)), url("../assets/hero-fondo.jpg") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 .hero .hero-content {
   max-width: 700px;
@@ -188,7 +188,7 @@ footer .rrss[alt*=Tiktok] {
    PROBLEMAS
 ================================ */
 .problemas {
-  background-color: #fff;
+  background: #fff;
   padding: 80px 20px;
   text-align: center;
 }
@@ -197,15 +197,9 @@ footer .rrss[alt*=Tiktok] {
   font-weight: bold;
   margin-bottom: 30px;
 }
-.problemas ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-.problemas ul li {
-  margin: 10px 0;
+.problemas li {
   font-size: 1.2rem;
+  margin: 10px 0;
 }
 .problemas .ver-planes-btn {
   background-color: rgb(236, 139, 155);
@@ -221,13 +215,13 @@ footer .rrss[alt*=Tiktok] {
   transform: scale(1.05);
 }
 
-/* ================================
-   RECIBIS — CARDS BIEN ALINEADAS
-================================ */
+/* ============================================================
+   RECIBIS — REPARADO PARA FUNCIONAR 100% CON BOOTSTRAP
+   ============================================================ */
 .recibis {
   background-color: rgb(236, 139, 155);
   color: white;
-  padding: 70px 20px 80px;
+  padding: 80px 20px;
   text-align: center;
 }
 .recibis h2 {
@@ -235,34 +229,34 @@ footer .rrss[alt*=Tiktok] {
   margin-bottom: 2.5rem;
 }
 .recibis {
-  /* CONTENEDOR DE LAS 3 CARDS */
+  /* --- ESTO ES LO QUE LO FIJA A 3 COLUMNAS PERFECTAS --- */
 }
-.recibis .cards-recibis {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 1150px;
-  margin: 0 auto;
+.recibis .row {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  flex-wrap: nowrap !important; /* 🔥 NO SE ROMPE MÁS */
+  gap: 30px;
 }
 .recibis {
-  /* CARD INDIVIDUAL */
+  /* --- TARJETA INDIVIDUAL --- */
 }
 .recibis .card-recibis {
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   padding: 25px;
   transition: 0.3s;
-  width: 320px;
-  min-height: 180px;
   background: #fff !important;
   color: #000;
   text-align: center;
+  width: 100%;
+  max-width: 330px; /* 🔥 ancho fijo para las 3 */
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease;
 }
 .recibis .card-recibis:hover {
@@ -272,50 +266,188 @@ footer .rrss[alt*=Tiktok] {
   color: rgb(236, 139, 155);
   font-weight: bold;
   margin-bottom: 12px;
-  font-size: 1.35rem;
 }
 .recibis .card-recibis p {
   margin: 0;
-  line-height: 1.5;
-  font-size: 1rem;
+  max-width: 230px;
+  text-align: center;
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .recibis .cards-recibis {
-    gap: 25px;
+/* ==================
+   RESPONSIVE MOBILE
+   ================== */
+@media (max-width: 992px) {
+  .recibis .row {
+    flex-wrap: wrap !important; /* 🔥 recién aca se amontonan */
+    gap: 20px !important;
   }
   .recibis .card-recibis {
-    width: 90%;
-    max-width: 360px;
-    min-height: auto;
-    padding: 22px 18px;
-  }
-  /* Centrado perfecto del contenido dentro de cada card */
-  .card-recibis {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-    /* Para que todas las cards sean iguales */
-    min-height: 180px;
-    padding: 25px 25px;
-  }
-  .card-recibis h4 {
-    width: 100%;
-    text-align: center !important;
-    margin-bottom: 12px;
-  }
-  .card-recibis p {
-    width: 100%;
-    text-align: center !important;
-    line-height: 1.5;
-    margin: 0 auto;
+    max-width: 360px !important;
   }
 }
+/* ============================================================
+   FAQ — ELEGANTE, SIN ESPACIOS FEOS, SOMBRAS UNIFORMES
+   ============================================================ */
+.faq {
+  background: #fff;
+  padding: 70px 20px;
+}
+.faq h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: rgb(236, 139, 155);
+  margin-bottom: 40px;
+}
+.faq .accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.faq {
+  /* --- ITEM --- */
+}
+.faq .accordion-item {
+  border: none !important;
+  margin-bottom: 10px !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+.faq {
+  /* --- BOTÓN --- */
+}
+.faq .accordion-button {
+  background: #fff !important;
+  color: #333 !important;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 18px 20px;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+}
+.faq .accordion-button.collapsed {
+  border-radius: 12px !important;
+}
+.faq .accordion-button:not(.collapsed) {
+  background: rgba(236, 139, 155, 0.1) !important;
+  color: rgb(236, 139, 155) !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+.faq .accordion-button::after {
+  filter: invert(45%) sepia(25%) saturate(600%) hue-rotate(300deg);
+}
+.faq {
+  /* --- CUERPO --- */
+}
+.faq .accordion-body {
+  padding: 18px 22px;
+  color: #333;
+  background: #fff;
+  border-radius: 0 0 12px 12px !important;
+  animation: fadeDown 0.3s ease-out;
+}
+
+/* ========================
+   Animación suave
+   ======================== */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================================
+   FIX ABSOLUTO ESPACIO BAJO FAQ
+================================ */
+.faq .accordion-item {
+  margin: 0 !important; /* elimina espacios externos */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* El botón crea espacio, así que controlamos ese gap */
+.faq .accordion-button {
+  margin-bottom: 8px !important; /* 🔥 este es el espacio real y prolijo */
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* El body pega abajo sin huecos */
+.faq .accordion-body {
+  margin: 0 !important;
+  padding: 18px 22px !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* Elimina cualquier hueco fantasma que deja Bootstrap */
+.faq .accordion-collapse {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Último item sin margen abajo */
+.faq .accordion-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================
+   AJUSTE FINAL — SEPARACIÓN ENTRE PREGUNTAS
+   ========================================== */
+/* 🔥 Reduce muchísimo el espacio entre items */
+.faq .accordion-item {
+  margin-bottom: 0 !important;
+}
+
+/* 🔥 Ajusta el espacio del botón */
+.faq .accordion-button {
+  margin: 0 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* 🔥 El body se pega bien al botón */
+.faq .accordion-button:not(.collapsed) {
+  margin: 0 !important;
+}
+
+/* 🔥 El body sin espacio extra */
+.faq .accordion-body {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  margin: 0 !important;
+}
+
+/* ==========================================
+   ELIMINAR ESPACIO ARRIBA DE CADA RESPUESTA
+   ========================================== */
+/* Quita padding/margin del contenedor que se abre */
+.faq .accordion-collapse {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Quitar padding FANTASMA que pone Bootstrap al abrir */
+.faq .accordion-collapse.collapse.show {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Asegurar que el wrapper interno tampoco meta espacio */
+.faq .accordion-collapse > .accordion-body {
+  margin-top: 0 !important;
+  padding-top: 0 !important; /* este es el culpable */
+}
+
+/* Pegamos el body directo al botón */
+.faq .accordion-button:not(.collapsed) {
+  margin-bottom: 0 !important;
+  border-radius: 12px 12px 0 0 !important;
+}
+
 .contenedor-rutinas {
   display: flex;
   justify-content: center;

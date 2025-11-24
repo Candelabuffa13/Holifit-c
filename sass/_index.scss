@@ -6,16 +6,13 @@
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-      rgba(236, 139, 155, 0.55),
-      rgba(236, 139, 155, 0.55)
-    ),
-    url("../assets/hero-fondo.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(236,139,155,0.55), rgba(236,139,155,0.55)),
+              url("../assets/hero-fondo.jpg") center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  color: white;
+  color: #fff;
 
   .hero-content {
     max-width: 700px;
@@ -47,7 +44,7 @@
    PROBLEMAS
 ================================ */
 .problemas {
-  background-color: #fff;
+  background: #fff;
   padding: 80px 20px;
   text-align: center;
 
@@ -57,16 +54,9 @@
     margin-bottom: 30px;
   }
 
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-
-    li {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
+  li {
+    font-size: 1.2rem;
+    margin: 10px 0;
   }
 
   .ver-planes-btn {
@@ -74,13 +64,13 @@
   }
 }
 
-/* ================================
-   RECIBIS — CARDS BIEN ALINEADAS
-================================ */
+/* ============================================================
+   RECIBIS — REPARADO PARA FUNCIONAR 100% CON BOOTSTRAP
+   ============================================================ */
 .recibis {
   background-color: v.$rosa;
   color: white;
-  padding: 70px 20px 80px;
+  padding: 80px 20px;
   text-align: center;
 
   h2 {
@@ -88,32 +78,32 @@
     margin-bottom: 2.5rem;
   }
 
-  /* CONTENEDOR DE LAS 3 CARDS */
-  .cards-recibis {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 40px;
-    max-width: 1150px;
-    margin: 0 auto;
+  /* --- ESTO ES LO QUE LO FIJA A 3 COLUMNAS PERFECTAS --- */
+  .row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    flex-wrap: nowrap !important;      /* 🔥 NO SE ROMPE MÁS */
+    gap: 30px;
   }
 
-  /* CARD INDIVIDUAL */
+  /* --- TARJETA INDIVIDUAL --- */
   .card-recibis {
-    @include v.card(15px, 0 3px 8px rgba(0, 0, 0, 0.1), 25px);
-
-    width: 320px;
-    min-height: 180px;
+    @include v.card(15px, 0 4px 12px rgba(0,0,0,0.12), 25px);
     background: #fff !important;
     color: #000;
     text-align: center;
 
+    width: 100%;
+    max-width: 330px;                 /* 🔥 ancho fijo para las 3 */
+    min-height: 180px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 
     &:hover {
       transform: translateY(-6px);
@@ -123,57 +113,188 @@
       color: v.$rosa;
       font-weight: bold;
       margin-bottom: 12px;
-      font-size: 1.35rem;
     }
 
     p {
       margin: 0;
-      line-height: 1.5;
-      font-size: 1rem;
+      max-width: 230px;
+      text-align: center;
     }
   }
 }
 
-/* ================================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .recibis .cards-recibis {
-    gap: 25px;
+/* ==================
+   RESPONSIVE MOBILE
+   ================== */
+@media (max-width: 992px) {
+  .recibis .row {
+    flex-wrap: wrap !important;     /* 🔥 recién aca se amontonan */
+    gap: 20px !important;
   }
 
   .recibis .card-recibis {
-    width: 90%;
-    max-width: 360px;
-    min-height: auto;
-    padding: 22px 18px;
+    max-width: 360px !important;
+  }
+}
+
+/* ============================================================
+   FAQ — ELEGANTE, SIN ESPACIOS FEOS, SOMBRAS UNIFORMES
+   ============================================================ */
+
+.faq {
+  background: #fff;
+  padding: 70px 20px;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: v.$rosa;
+    margin-bottom: 40px;
   }
 
-  /* Centrado perfecto del contenido dentro de cada card */
-.card-recibis {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-
-  /* Para que todas las cards sean iguales */
-  min-height: 180px;
-  padding: 25px 25px;
-
-  h4 {
-    width: 100%;
-    text-align: center !important;
-    margin-bottom: 12px;
-  }
-
-  p {
-    width: 100%;
-    text-align: center !important;
-    line-height: 1.5;
+  .accordion {
+    max-width: 700px;
     margin: 0 auto;
   }
+
+  /* --- ITEM --- */
+  .accordion-item {
+    border: none !important;
+    margin-bottom: 10px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+  }
+
+  /* --- BOTÓN --- */
+  .accordion-button {
+    background: #fff !important;
+    color: v.$gris-oscuro !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 18px 20px;
+
+    box-shadow: none !important;
+    border-radius: 10px !important;
+
+    &.collapsed {
+      border-radius: 12px !important;
+    }
+
+    &:not(.collapsed) {
+      background: rgba(v.$rosa, 0.1) !important;
+      color: v.$rosa !important;
+      border-radius: 12px 12px 0 0 !important;
+    }
+
+    &::after {
+      filter: invert(45%) sepia(25%) saturate(600%) hue-rotate(300deg);
+    }
+  }
+
+  /* --- CUERPO --- */
+  .accordion-body {
+    padding: 18px 22px;
+    color: v.$gris-oscuro;
+    background: #fff;
+    border-radius: 0 0 12px 12px !important;
+    animation: fadeDown .3s ease-out;
+  }
 }
 
+/* ========================
+   Animación suave
+   ======================== */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* ================================
+   FIX ABSOLUTO ESPACIO BAJO FAQ
+================================ */
+
+.faq .accordion-item {
+  margin: 0 !important;            /* elimina espacios externos */
+  border: none !important;
+  box-shadow: none !important;
 }
 
+/* El botón crea espacio, así que controlamos ese gap */
+.faq .accordion-button {
+  margin-bottom: 8px !important;   /* 🔥 este es el espacio real y prolijo */
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
+}
+
+/* El body pega abajo sin huecos */
+.faq .accordion-body {
+  margin: 0 !important;
+  padding: 18px 22px !important;
+  border-radius: 0 0 12px 12px !important;
+}
+
+/* Elimina cualquier hueco fantasma que deja Bootstrap */
+.faq .accordion-collapse {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Último item sin margen abajo */
+.faq .accordion-item:last-child {
+  margin-bottom: 0 !important;
+}
+/* ==========================================
+   AJUSTE FINAL — SEPARACIÓN ENTRE PREGUNTAS
+   ========================================== */
+
+/* 🔥 Reduce muchísimo el espacio entre items */
+.faq .accordion-item {
+  margin-bottom: 0 !important;
+}
+
+/* 🔥 Ajusta el espacio del botón */
+.faq .accordion-button {
+  margin: 0 !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* 🔥 El body se pega bien al botón */
+.faq .accordion-button:not(.collapsed) {
+  margin: 0 !important;
+}
+
+/* 🔥 El body sin espacio extra */
+.faq .accordion-body {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  margin: 0 !important;
+}
+/* ==========================================
+   ELIMINAR ESPACIO ARRIBA DE CADA RESPUESTA
+   ========================================== */
+
+/* Quita padding/margin del contenedor que se abre */
+.faq .accordion-collapse {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+}
+
+/* Quitar padding FANTASMA que pone Bootstrap al abrir */
+.faq .accordion-collapse.collapse.show {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Asegurar que el wrapper interno tampoco meta espacio */
+.faq .accordion-collapse > .accordion-body {
+  margin-top: 0 !important;
+  padding-top: 0 !important;   /* este es el culpable */
+}
+
+/* Pegamos el body directo al botón */
+.faq .accordion-button:not(.collapsed) {
+  margin-bottom: 0 !important;
+  border-radius: 12px 12px 0 0 !important;
+}
