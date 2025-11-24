@@ -508,6 +508,18 @@ footer .rrss[alt*=Tiktok] {
   color: black;
 }
 
+.titulo-rutinas {
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0rem;
+}
+
+.titulo-rutinas {
+  color: rgb(236, 139, 155) !important;
+  margin-top: -40px !important;
+}
+
 /* ======================================
    CONTENEDOR GENERAL
 ====================================== */
