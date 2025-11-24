@@ -293,6 +293,28 @@ footer .rrss[alt*=Tiktok] {
     min-height: auto;
     padding: 22px 18px;
   }
+  /* Centrado perfecto del contenido dentro de cada card */
+  .card-recibis {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    /* Para que todas las cards sean iguales */
+    min-height: 180px;
+    padding: 25px 25px;
+  }
+  .card-recibis h4 {
+    width: 100%;
+    text-align: center !important;
+    margin-bottom: 12px;
+  }
+  .card-recibis p {
+    width: 100%;
+    text-align: center !important;
+    line-height: 1.5;
+    margin: 0 auto;
+  }
 }
 .contenedor-rutinas {
   display: flex;
